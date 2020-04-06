@@ -55,7 +55,9 @@ function getDogs(){
 
 
 function displayDogs(json){
+    //  set it to empty string (reset the html under dogbar) so you won't show the HTML twice in index.html
     dogbar.innerHTML=""
+    
     json.forEach(dogs =>{
         dogbar.innerHTML+=`
         <span data-id=${dogs.id} class="span-dog"> ${dogs.name}</span>`
@@ -103,7 +105,7 @@ function updateDog(dog){
 
 
 function filterDogs(){
- 
+//  set it to empty string (reset the html) you dont want to show the HTML twice on index.html
     dogbar.innerHTML="";
 
 return storage.forEach(dog=>{
